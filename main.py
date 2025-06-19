@@ -57,7 +57,7 @@ CALLBACK_URL = os.getenv("MPESA_CALLBACK_URL")
 TRANSACTION_TYPE = "CustomerBuyGoodsOnline"
 ACCOUNT_REFERENCE = "CompanyXYZ"
 TRANSACTION_DESC = "Payment for services"
-PARTY_B =  os.getenv("MPESA_PARTY_B")
+PARTY_B = "4986750"
 
 # API endpoints
 BASE_URL = os.getenv("MPESA_BASE_URL", "https://api.safaricom.co.ke")
