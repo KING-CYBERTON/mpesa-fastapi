@@ -194,8 +194,10 @@ async def initiate_stk_push(request: STKPushRequest):
 
         # Make the STK Push request
         response = requests.post(STK_PUSH_URL, json=payload, headers=headers)
+        print(response)
         response.raise_for_status()
         result = response.json()
+        print(request)
 
         # Check if request was successful
         if result.get('ResponseCode') == '0':
