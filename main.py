@@ -49,11 +49,11 @@ def initialize_firebase():
 db = initialize_firebase()
 
 # Configuration from environment variables
-CONSUMER_KEY = os.getenv("MPESA_CONSUMER_KEY")
-CONSUMER_SECRET = os.getenv("MPESA_CONSUMER_SECRET")
-BUSINESS_SHORT_CODE = os.getenv("MPESA_BUSINESS_SHORT_CODE", "5501736")
-PASS_KEY = os.getenv("MPESA_PASS_KEY")
-CALLBACK_URL = os.getenv("MPESA_CALLBACK_URL")
+CONSUMER_KEY = "XbgBQxIEBCy2pXDziawn3IQnlk9cKm2ne2TXTaMpn4oK5Rxl"
+CONSUMER_SECRET = "cAtEVPApokv8z8bW2sSixeQwHGMBxUscTGrUXpu9OxXxGothqsjkcvgdbnfoDzvi"
+BUSINESS_SHORT_CODE = "5501736"
+PASS_KEY = "af785d9e5d8c49b8bbe3ed7cfe28530b4df98c6ff419388e1f047e6ba1b99275"
+CALLBACK_URL = "https://mpesa-fastapi-production.up.railway.app/mpesa-callback "
 TRANSACTION_TYPE = "CustomerBuyGoodsOnline"
 ACCOUNT_REFERENCE = "CompanyXYZ"
 TRANSACTION_DESC = "Payment for services"
