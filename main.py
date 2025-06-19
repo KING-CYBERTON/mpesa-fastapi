@@ -154,6 +154,7 @@ async def initiate_stk_push(request: STKPushRequest):
                 status_code=400,
                 detail="Invalid phone number format. Use format: 0722000000 or 254722000000"
             )
+        print(phone_number)
 
         if amount <= 0:
             raise HTTPException(
@@ -163,9 +164,12 @@ async def initiate_stk_push(request: STKPushRequest):
 
         # Generate password and timestamp
         password, timestamp = generate_password()
+        print(password)
+        
 
         # Get access token
         access_token = get_access_token()
+        print(access_token)
 
         # Prepare STK Push request
         headers = {
@@ -186,6 +190,7 @@ async def initiate_stk_push(request: STKPushRequest):
             "AccountReference": request.account_reference,
             "TransactionDesc": request.transaction_desc
         }
+        print(payload)
 
         # Make the STK Push request
         response = requests.post(STK_PUSH_URL, json=payload, headers=headers)
