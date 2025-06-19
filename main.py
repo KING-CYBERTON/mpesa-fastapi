@@ -35,7 +35,7 @@ app.add_middleware(
 def initialize_firebase():
     if not firebase_admin._apps:
         BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-        cred_path = os.path.join(BASE_DIR, os.getenv("FIREBASE_SERVICE_ACCOUNT_PATH"))
+        cred_path = os.path.join(BASE_DIR, "kassmatt-f28c7-firebase-adminsdk-jmtlo-0bb2879fc1.json")
 
 
         if cred_path and os.path.exists(cred_path):
@@ -57,7 +57,7 @@ CALLBACK_URL = os.getenv("MPESA_CALLBACK_URL")
 TRANSACTION_TYPE = "CustomerBuyGoodsOnline"
 ACCOUNT_REFERENCE = "CompanyXYZ"
 TRANSACTION_DESC = "Payment for services"
-PARTY_B = "4986750"
+PARTY_B =  os.getenv("MPESA_PARTY_B")
 
 # API endpoints
 BASE_URL = os.getenv("MPESA_BASE_URL", "https://api.safaricom.co.ke")
